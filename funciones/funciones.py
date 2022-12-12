@@ -72,3 +72,9 @@ def sumador(**kwargs):
 
 print(sumador(inicial = 15, final = 30))
 
+'''funciones anonimas'''
+anonima = lambda nombre, nombre2: print('hola', nombre, 'adios', nombre2)
+anonima('pepe', 'pablo')
+
+sumatoria = lambda x: x + x
+print(sumatoria(2))
