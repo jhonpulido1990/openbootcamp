@@ -17,9 +17,11 @@ class dino1:
     _encendido = True
 
     def encendido(self):
+        print('prende el aparato')
         self._encendido = True
 
     def apaga(self):
+        print('apaga el aparato')
         self._encendido = False
 
     def isencendido(self):
@@ -51,3 +53,32 @@ print(estatica.numero)
 
 estatica.incrementa()
 print(estatica.numero)
+
+'''herencias'''
+
+class potato(dino1):
+    color = None
+    nombre = None
+
+    def __init__(self, nombre):
+        self.color = 'verde'
+        self.nombre = nombre
+
+    def __del__(self):
+        print('estoy en el destructor de la clase :', self.__class__)
+
+    def quitaroreja(self):
+        pass
+
+    def poneroreja(self):
+        pass
+
+class dondino(dino1):
+    def verescama(self):
+        pass
+
+p = potato()
+p.encendido()
+print(p.isencendido())
+print(dir(p))
+
