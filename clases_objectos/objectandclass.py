@@ -81,4 +81,3 @@ p = potato()
 p.encendido()
 print(p.isencendido())
 print(dir(p))
-
