@@ -2,7 +2,7 @@
 
 import pickle
 
-class Vehículo:
+class Vehiculo:
     motor = ''
     puertas = 0
     velocidad = 0.0
@@ -12,7 +12,7 @@ class Vehículo:
         self.puertas = puertas
         self.velocidad = velocidad
 
-mazda = Vehículo('Dissel', 5, 180.5)
+mazda = Vehiculo('Dissel', 5, 180.5)
 f = open('ejercicio_8-2.txt', 'wb')
 pickle.dump(mazda, f)
 f.close()
