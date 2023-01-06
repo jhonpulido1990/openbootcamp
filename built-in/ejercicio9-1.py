@@ -9,4 +9,4 @@ list_paises = []
 for pais in sorted(paises):
     list_paises.append(pais)
 
-print(list_paises)
+print(set(list_paises))
