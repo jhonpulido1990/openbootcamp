@@ -19,7 +19,7 @@ class Movie(models.Model):
     genre = models.ManyToManyField(Genre)
 
     def __str__(self):
-        return self.title
+        return '%s (%s) %s (%s) %s (%s)' % (self.title, self.director, self.Release, self.summary, self.company, self.genre)
 
     def get_absolute_url(self):
         return reverse('movie-detail', args=[str(self.id)])

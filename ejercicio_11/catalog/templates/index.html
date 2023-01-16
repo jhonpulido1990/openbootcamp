@@ -1,14 +1,22 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
-<p>Welcome to <em>LocalLibrary</em>, a very basic django website developed as a tutorial example</p>
+<h1>Local Movie Home</h1>
+<p>Welcome to <em>LocalMovies</em>, a very basic django website developed as a tutorial example</p>
 <h2>dynamic content</h2>
-<p>The Library has the following record count:</p>
+<p>The Movies has the following record count:</p>
 <ul>
-    <li><strong>Movies:</strong> {{ num_movies }} </li>
-    <li><strong>Copies:</strong> {{ num_instance }} </li>
+    <li><strong>Cant movies:</strong> {{ num_instance }} </li>
     <li><strong>Num directors:</strong> {{ num_directors }} </li>
-    <li><strong>authors:</strong> {{ all_movies }} </li>
+    <br><br>
+    {% for x in all_movies %}
+    <li>el director: {{ x.director }}</li>
+    <li>las peliculas que ha dirigido: {{ x.title }}</li>
+    <li>fecha de lanzamiento: {{ x.Release }}</li>
+    <li>comentarios: {{ x.summary }}</li>
+    <li>compañia de produccion: {{ x.company }}</li>
+    <br>
+    <br><br>
+    {% endfor %}
 </ul>
 {% endblock %}
